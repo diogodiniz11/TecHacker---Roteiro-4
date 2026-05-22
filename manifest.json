@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "Roteiro 4",
+  "version": "1.0.0",
+  "description": "Detecta e apresenta ameaças à privacidade e rastreamento na navegação web.",
+
+  "icons": {
+    "48": "icons/icon48.png"
+  },
+
+  "browser_action": {
+    "default_icon": "icons/icon48.png",
+    "default_popup": "popup/popup.html",
+    "default_title": "Privacy Monitor"
+  },
+
+  "permissions": [
+    "webRequest",
+    "webNavigation",
+    "cookies",
+    "storage",
+    "tabs",
+    "activeTab",
+    "<all_urls>"
+  ],
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js", "relay.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ]
+}

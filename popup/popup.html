@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Roteiro 4</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <span class="logo">🔒 Roteiro 4</span>
+    <span id="origin" class="origin">—</span>
+  </header>
+
+  <section class="score-wrap">
+    <div class="score-ring" id="ring"><span id="scoreVal">—</span></div>
+    <div id="scoreLabel" class="score-label">Carregando...</div>
+  </section>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="tp">Terceiros</button>
+    <button class="tab" data-tab="cookies">Cookies</button>
+    <button class="tab" data-tab="storage">Storage</button>
+    <button class="tab" data-tab="fp">Fingerprint</button>
+    <button class="tab" data-tab="hj">Hijacking</button>
+  </nav>
+
+  <main>
+    <div class="panel active" id="panel-tp">
+      <p class="empty" id="tp-empty">Nenhuma conexão de terceira parte.</p>
+      <ul id="tp-list" class="list"></ul>
+    </div>
+    <div class="panel" id="panel-cookies">
+      <div id="cookie-stats" class="stats"></div>
+      <p class="empty" id="cookie-empty">Nenhum cookie encontrado.</p>
+      <ul id="cookie-list" class="list"></ul>
+    </div>
+    <div class="panel" id="panel-storage">
+      <p class="empty" id="storage-empty">Nenhum dado em Web Storage.</p>
+      <ul id="storage-list" class="list"></ul>
+    </div>
+    <div class="panel" id="panel-fp">
+      <p class="empty" id="fp-empty">Nenhum fingerprinting detectado.</p>
+      <ul id="fp-list" class="list"></ul>
+    </div>
+    <div class="panel" id="panel-hj">
+      <p class="empty" id="hj-empty">Nenhuma ameaça de hijacking.</p>
+      <ul id="hj-list" class="list"></ul>
+    </div>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
